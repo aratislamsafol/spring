@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>staging7</title>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <!--Replace with your tailwind.css once created-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <div class="flex justify-between mt-2">
+     <img src="img/Latest-Logo2-1.png" class="w-36" alt="">
+     <div class="flex relative">
+      <div class="mt-3 p-2">
+        <i class="fa-solid fa-phone bg_phn py-2 rounded-2xl px-8"></i>
+       </div>
+       <div class="mt-5 p-2">
+        <i class="fa-solid fa-bars nav_color font cursor-pointer" id="drop"></i>
+       </div>
+     </div>
+    
+        <!-- mobile device -->
+    <div class="absolute bg-white nav_font_Color gap-2 top-20 hidden z-20  w-full" id="nav_drop">
+      <div class="container flex flex-col gap-3 p-3">
+        <a href="">Home</a>
+        <a href=""class="flex justify-between " id="drop_btn">
+          <p>Limo Service</p>
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <div class="hidden w-full" id="nav_drop_btn">
+          <a href="">Homex</a>
+          <a href="">Homex</a>
+          <a href="">Homex</a>
+        </div>
+
+        <a href=""class="flex justify-between " id="drop_btn">
+          <p>Reservation</p>
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+        <div class="hidden w-full" id="nav_drop_btn">
+          <a href="">Homex</a>
+          <a href="">Homex</a>
+          <a href="">Homex</a>
+        </div>
+        <a href="">Blog</a>
+        <a href="">About</a>
+        <a href="">FAQ</a>
+        <a href="">Contact</a>
+      </div>
+    </div>
+   </div>
+
+
+
+<!-- component -->
+<!-- <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">
+  <div x-data="{ open: false }" class="flex mt-2 flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+    <div class="flex flex-row items-center justify-between">
+      <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img src="img/Latest-Logo2-1.png" class="h-18 w-48" alt=""></a>
+      <a href="" class="md:hidden"><i class="fa-solid fa-phone ml-6 bg_phn px-6 py-2 rounded-2xl"></i></a>
+      <button class="md:hidden nav_color rounded-lg focus:outline-none focus:shadow-outline mr-2" @click="open = !open">
+        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+          <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+      <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Home</a>
+      <div @click.away="open = false" class="relative" x-data="{ open: false }">
+        <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+          <span>Limo Services</span>
+          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+          <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #1</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #2</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
+          </div>
+        </div>
+      </div>  
+      
+      <div @click.away="open = false" class="relative" x-data="{ open: false }">
+        <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+          <span>Reservation</span>
+          <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </button>
+        <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
+          <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #1</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #2</a>
+            <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
+          </div>
+        </div>
+      </div>    
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
+
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">FAQ</a>
+      <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
+
+      <a href="" class="text-white mt-2 bg-red-500 px-8 rounded-2xl">Call Now</a>
+    </nav>
+  </div>
+</div> -->
+
+    <!-- Banner -->
+    <div class="w-full relative flex flex-col justify-center items-center">
+      <div class="w-full bg-gray-600">
+        <img src="img/Chicago-limo1.jpg" class="h-28 w-full mix-blend-overlay" alt="">
+      </div>
+      
+      <div class="absolute">
+        <div class="">
+          <p class="text-4xl p-3 text-center text-white font-medium"> Request A Quote</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <section class="mt-2 relative flex flex-col justify-center items-center">
+      <img src="img/134045443_1005042886655259_5241309969712941411_n.jpg" class="opacity-10 contetn_img w-full" alt="">
+      <div class="absolute ">
+        <div class="p-2 bg-white w-11/12 mx-auto">
+          <h3 class="text-4xl text-center text-gray-700">Receive a Quote for Our Service</h3>
+          <div class="flex flex-col p-5">
+            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Name" type="text" name=""/>
+            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm  mt-3 py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Last Name" type="text" name=""/>
+  
+            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm  mt-3 py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Email" type="text" name=""/>
+  
+            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm  mt-3 py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Phone" type="text" name=""/>
+  
+            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm  mt-3 py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Pick Up Location" type="text" name=""/>
+  
+            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm  mt-3 py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Drop Up Location" type="text" name=""/>
+  
+  
+            <select class="border py-2 pl-2 pr-3 mt-3" name="" id="">
+              <option value="volvo text-xs">Car Type</option>
+              <option value="saab text-xs">Sedan!</option>
+              <option value="mercedes text-xs">SUV</option>
+              <option value="audi text-xs">Sprinter</option>
+            </select>
+  
+            <select class="border py-2 pl-2 pr-3 mt-3" name="" id="">
+              <option value="volvo">Service Type</option>
+              <option value="saab">Airport Transfers</option>
+              <option value="mercedes">Point to Point</option>
+              <option value="audi">Hourly</option>
+            </select>
+  
+            <div class="relative mt-3">
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                
+              </div>
+              <input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full pl-2 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date">
+            </div>
+  
+            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm  mt-3 py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="No. of Passengers" type="text" name=""/>
+            
+          <button class="border mt-3 py-3 text-xl font-medium text-white rounded-full btn_color" name="" id="">Send</button>
+          </div>
+        </div>
+        <div class="w-full p-3">
+          <h1 class="text-2xl text-gray-800 font-normal">REQUEST A LIMO SERVICE QUOTE AT SKYLINE LIMO</h1>
+          <div class="border-2 border-blue-400 w-12 mt-5"></div>
+          <p class="mt-5">Request limo service quotes today with Skyline Chicago Limousine Services! We offer a large selection of limos and vehicles to meet your needs. Our catalog features vehicles such as stretch limos, sedans, SUVs, limo buses, and vans. Skyline Chicago
+          </p>
+          <p>
+            Limousine Services provides timely, safe, and reliable limo rental services in Chicago, Illinois and surrounding areas. We’ll get you where you need to be safely, on time, and always in style. Getting limo service quotes is easy and quick. With your quote, you can book a Chicago, IL limousine for events such as corporate meetings, client presentations, weddings, bachelor/bachelorette parties, or a night out on the town. Fill in the form below and receive a free limo quote today!</p>
+            <button class="border mt-3 py-1 w-full text-xl font-medium text-white rounded-full btn_color" name="" id="">Any Questions?  
+              <br>
+              Contact Us</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="flex flex-col text-white" style="background-image: url('img/Untitled-1.jpg');" >
+
+      <div class="flex">
+        
+        <div class="flex flex-col p-3">
+          <h2 class="font-medium mb-3">Airport Transfer</h2>
+          <a href="" class="text-sm font-light">Corporate</a>
+          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Lima</a>
+          <a href="" class="text-sm font-light">Service</a>
+          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Airport</a>
+          <a href="" class="text-sm font-light">Lima</a>
+          <a href="" class="text-sm font-light">Chicago</a>
+          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Lima</a>
+          <a href="" class="text-sm font-light">Service To</a>
+          <a href="" class="text-sm font-light">Joliet</a>
+          <a href="" class="text-sm font-light">Midway</a>
+        </div>
+
+        <div class="flex flex-col p-3">
+          <h2 class="font-medium mb-3">Special Events</h2>
+          <a href="" class="text-sm font-light">Corporate</a>
+          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Lima</a>
+          <a href="" class="text-sm font-light">Service</a>
+          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Airport</a>
+          <a href="" class="text-sm font-light">Lima</a>
+          <a href="" class="text-sm font-light">Chicago</a>
+          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Lima</a>
+          <a href="" class="text-sm font-light">Service To</a>
+          <a href="" class="text-sm font-light">Joliet</a>
+          <a href="" class="text-sm font-light">Midway</a>
+        </div>
+
+        <div class="flex flex-col p-3">
+          <h2 class="font-medium mb-3">Service Areas</h2>
+          <a href="" class="text-sm font-light">Corporate</a>
+          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Lima</a>
+          <a href="" class="text-sm font-light">Service</a>
+          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Airport</a>
+          <a href="" class="text-sm font-light">Lima</a>
+          <a href="" class="text-sm font-light">Chicago</a>
+          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Lima</a>
+          <a href="" class="text-sm font-light">Service To</a>
+          <a href="" class="text-sm font-light">Joliet</a>
+          <a href="" class="text-sm font-light">Midway</a>
+        </div>
+      </div>
+      <div class="p-10 flex flex-col">
+        <img src="img/New-Logo-different-font.png" class="" alt="">
+        <div class="flex text-sm">
+          <i class="fa-solid fa-envelope text-xl"></i>
+          <p>info@Skylinechicagolimo.com</p>
+        </div>
+        <div class="flex text-sm mt-2">
+          <i class="fa-solid fa-phone text-xl"></i>
+          <p>+1 (773) 575-8169</p>
+        </div>
+
+        <div class="flex justify-center gap-1 mt-3">
+          <i class="fa-brands fa-facebook-f footer_fab"></i>
+          <i class="fa-brands fa-twitter footer_icon"></i>
+          <i class="fa-brands fa-linkedin-in footer_icon"></i>
+          <i class="fa-brands fa-instagram footer_icon"></i>
+          <i class="fa-brands fa-youtube footer_you"></i>
+
+        </div>
+      </div>
+
+      <div class="flex p-3 justify-center">
+        <img src="img/secure90x72.gif" class="h-20 w-24 mr-8" alt="">
+        <img src="img/NLA.jpg" class="h-8 mt-6 w-24" alt="">
+      </div>
+
+      <div class="flex flex-col justify-center items-center text-center">
+        <p class="p-5">Download Our App and Use Codes 1F286F</p>
+      </div>
+
+      <div class="flex p-3 gap-6  justify-center">
+        <img src="img/apple-store-p3mqeojezwn2nb04loazbggojgeoqsz51u2s7wqq16.jpg" class="h-8 mt-6 w-24" alt="">
+        <img src="img/play-store-p3mqf97v69fdqq638x8rub8tlxkrg598gofgrzw28a.jpg" class="h-8 mt-6 w-24" alt="">
+      </div>
+
+      <div class="flex flex-col p-10 pt-3 pb-10 text-xs">
+        <div class="flex">
+          <i class="fa-solid fa-copyright"></i>2021 Skyline Chicago Limousine Service.
+
+        </div>
+        All Rights Reserved.
+      </div>
+
+      <div class="w-full footer_bottom">
+        <p class="p-8 py-3 text-center">All Rights Reserved <i class="fa-solid fa-copyright"></i> Skyline Chicago Limo</p>
+      </div>
+
+    
+
+    </footer>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://unpkg.com/flowbite@1.4.2/dist/datepicker.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
