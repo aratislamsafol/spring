@@ -16,7 +16,7 @@
 
 $(document).ready(function(){
     $('#drop').click(function(){
-        $('#nav_drop').toggle();
+        $('#nav_drop').toggle(200);
         // $('#nav_drop').hide();
         // $('#drop').show();
     })
@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $('#nav_drop').click(function(){
-      $('#drop').toggle();
+      $('#drop').toggle(200);
       // $('#nav_drop').show();
       // $('#drop').hide();
     });

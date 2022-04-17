@@ -32,28 +32,109 @@
 .btn_color{
     background: #F15A2B;
 }
-.contetn_img{
-    height: 1600px;
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .contetn_img{
+        height: 1600px;
+    }
 }
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .contetn_img{
+        height: 1200px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .contetn_img{
+        height: 850px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
 .border_color{
     color:blue;
 }
-.footer_icon{
-    padding:14px;
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .footer_icon{
+        padding:14px;
+        background: #F15A2B;
+        border-radius: 100%;
+    }
+    .footer_fab{
+        padding:14px 16px;
+        background: #F15A2B;
+        border-radius: 100%;
+    }
+    .footer_you{
+        padding:14px 13px;
+        background: #F15A2B;
+        border-radius: 100%; 
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .footer_icon{
+        padding:14px;
+        background: #F15A2B;
+        border-radius: 100%;
+    }
+    .footer_fab{
+        padding:14px 16px;
+        background: #F15A2B;
+        border-radius: 100%;
+    }
+    .footer_you{
+        padding:14px 13px;
+        background: #F15A2B;
+        border-radius: 100%; 
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .footer_icon{
+   
+    text-align: center;
     background: #F15A2B;
     border-radius: 100%;
+    }
+    .footer_fab{
+        background: #F15A2B;
+        border-radius: 100%;
+    }
+    .footer_you{
+        background: #F15A2B;
+        border-radius: 100%; 
+    }
 }
-.footer_fab{
-    padding:14px 16px;
-    background: #F15A2B;
-    border-radius: 100%;
-}
-.footer_you{
-    padding:14px 13px;
-    background: #F15A2B;
-    border-radius: 100%; 
-}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+
 .footer_bottom{
     background: #F15A2B;
+    
+}
+.nav_call_bg{
+    background: #377095;
+    
+}
+.btn-md{
     
 }

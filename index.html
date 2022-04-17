@@ -12,19 +12,22 @@
 </head>
 <body>
    <div class="flex justify-between mt-2">
-     <img src="img/Latest-Logo2-1.png" class="w-36" alt="">
-     <div class="flex relative">
-      <div class="mt-3 p-2">
-        <i class="fa-solid fa-phone bg_phn py-2 rounded-2xl px-8"></i>
+     <img src="img/Latest-Logo2-1.png" class="w-36 md:w-72" alt="">
+     <div class="relative flex md:justify-between md:w-2/3">
+      <div class="mt-3 p-2 md:hidden">
+        <i class="fa-solid fa-phone bg_phn rounded-2xl py-2 px-8 "></i>
        </div>
-       <div class="mt-5 p-2">
+       <div class="mt-3 p-2 ml-12 hidden md:block">
+         <a href="" class="px-14 py-2 nav_call_bg text-xl text-white rounded-2xl ">Call Now</a>
+       </div>
+       <div class="mt-5 p-2 md:mr-20">
         <i class="fa-solid fa-bars nav_color font cursor-pointer" id="drop"></i>
        </div>
      </div>
     
-        <!-- mobile device -->
-    <div class="absolute bg-white nav_font_Color gap-2 top-20 hidden z-20  w-full" id="nav_drop">
-      <div class="container flex flex-col gap-3 p-3">
+    <!-- mobile device -->
+    <div class="absolute bg-white nav_font_Color gap-2 top-20 hidden z-20 w-full" id="nav_drop">
+      <div class="container flex flex-col gap-3 p-3 md:w-full">
         <a href="">Home</a>
         <a href=""class="flex justify-between " id="drop_btn">
           <p>Limo Service</p>
@@ -51,6 +54,9 @@
         <a href="">Contact</a>
       </div>
     </div>
+
+    <!-- md or tablet device -->
+
    </div>
 
 
@@ -111,23 +117,24 @@
     <!-- Banner -->
     <div class="w-full relative flex flex-col justify-center items-center">
       <div class="w-full bg-gray-600">
-        <img src="img/Chicago-limo1.jpg" class="h-28 w-full mix-blend-overlay" alt="">
+        <img src="img/Chicago-limo1.jpg" class="h-28 md:h-48 w-full mix-blend-overlay" alt="">
       </div>
       
       <div class="absolute">
         <div class="">
-          <p class="text-4xl p-3 text-center text-white font-medium"> Request A Quote</p>
+          <p class="text-4xl md:text-5xl p-3 text-center text-white font-medium"> Request A Quote</p>
         </div>
       </div>
     </div>
 
     <!-- Content -->
-    <section class="mt-2 relative flex flex-col justify-center items-center">
+    <section class="mt-2 relative flex flex-col">
       <img src="img/134045443_1005042886655259_5241309969712941411_n.jpg" class="opacity-10 contetn_img w-full" alt="">
-      <div class="absolute ">
-        <div class="p-2 bg-white w-11/12 mx-auto">
-          <h3 class="text-4xl text-center text-gray-700">Receive a Quote for Our Service</h3>
-          <div class="flex flex-col p-5">
+      <div class="absolute md:flex mt-20">
+        <div class="p-2 bg-white ml-5 w-11/12 mx-auto">
+          <h3 class="text-4xl text-center text-gray-700 md:text-2xl">Receive a Quote for Our Service</h3>
+          <div class="flex flex-col p-5 md:hidden">
+            
             <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Name" type="text" name=""/>
             <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm  mt-3 py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Last Name" type="text" name=""/>
   
@@ -140,11 +147,11 @@
             <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm  mt-3 py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Drop Up Location" type="text" name=""/>
   
   
-            <select class="border py-2 pl-2 pr-3 mt-3" name="" id="">
-              <option value="volvo text-xs">Car Type</option>
-              <option value="saab text-xs">Sedan!</option>
-              <option value="mercedes text-xs">SUV</option>
-              <option value="audi text-xs">Sprinter</option>
+            <select class="border  py-2 pl-2 pr-3 mt-3" name="" id="">
+                <option value="volvo text-xs">Car Type</option>
+                <option value="saab text-xs">Sedan!</option>
+                <option value="mercedes text-xs">SUV</option>
+                <option value="audi text-xs">Sprinter</option>
             </select>
   
             <select class="border py-2 pl-2 pr-3 mt-3" name="" id="">
@@ -165,6 +172,55 @@
             
           <button class="border mt-3 py-3 text-xl font-medium text-white rounded-full btn_color" name="" id="">Send</button>
           </div>
+
+          <div class="flex flex-col hidden  md:block mt-5">
+            <div class="md:flex justify-between">
+              <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm py-2 pl-2 pr-3 mr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Name" type="text" name=""/>
+              
+              <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm py-2 pl-2 pr-3 mr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Name" type="text" name=""/>
+            </div>
+
+            <div class="md:flex justify-between mt-5">
+              <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm py-2 pl-2 pr-3 mr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Name" type="text" name=""/>
+              
+              <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm py-2 pl-2 pr-3 mr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Name" type="text" name=""/>
+            </div>
+
+            <!--  -->
+            <div class="md:flex justify-between mt-5">
+              <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm py-2 pl-2 pr-3 mr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Name" type="text" name=""/>
+              
+              <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm py-2 pl-2 pr-3 mr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="Name" type="text" name=""/>
+            </div>
+
+            <!--  -->
+            <div class="md:flex justify-between mt-3">
+              <select class="border  py-2 px-12 mt-3" name="" id="">
+                <option value="volvo text-xs">Car Type</option>
+                <option value="saab text-xs">Sedan!</option>
+                <option value="mercedes text-xs">SUV</option>
+                <option value="audi text-xs">Sprinter</option>
+            </select>
+  
+              <select class="border py-2 px-5 mt-3 mr-4" name="" id="">
+                <option value="volvo">Service Type</option>
+                <option value="saab">Airport Transfers</option>
+                <option value="mercedes">Point to Point</option>
+                <option value="audi">Hourly</option>
+              </select>
+            </div>
+<!--  -->
+            <div class="md:flex justify-between mt-2">
+              <div class="relative mt-3">
+                <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                </div>
+                <input datepicker type="text" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-sm focus:ring-blue-500 focus:border-blue-500 block w-full px-14 py-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date">
+              </div>
+    
+              <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-sm  mt-3 py-2 px-4 ml-2 mr-6 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm font-light" placeholder="No. of Passengers" type="text" name=""/>
+            </div>
+            <button class="border mt-3 w-full px-8 py-1 mt-8 text-xl font-medium text-white rounded-2xl  btn_color" name="" id="">Send</button>
+          </div>
         </div>
         <div class="w-full p-3">
           <h1 class="text-2xl text-gray-800 font-normal">REQUEST A LIMO SERVICE QUOTE AT SKYLINE LIMO</h1>
@@ -180,63 +236,107 @@
       </div>
     </section>
 
-    <footer class="flex flex-col text-white" style="background-image: url('img/Untitled-1.jpg');" >
+    <footer class="flex flex-col justify-center mx-auto text-white" style="background-image: url('img/Untitled-1.jpg');" >
 
       <div class="flex">
         
         <div class="flex flex-col p-3">
           <h2 class="font-medium mb-3">Airport Transfer</h2>
-          <a href="" class="text-sm font-light">Corporate</a>
-          <a href="" class="text-sm font-light">Midway</a>
-          <a href="" class="text-sm font-light">Lima</a>
-          <a href="" class="text-sm font-light">Service</a>
-          <a href="" class="text-sm font-light">Midway</a>
-          <a href="" class="text-sm font-light">Airport</a>
-          <a href="" class="text-sm font-light">Lima</a>
-          <a href="" class="text-sm font-light">Chicago</a>
-          <a href="" class="text-sm font-light">Midway</a>
-          <a href="" class="text-sm font-light">Lima</a>
-          <a href="" class="text-sm font-light">Service To</a>
-          <a href="" class="text-sm font-light">Joliet</a>
-          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
         </div>
 
         <div class="flex flex-col p-3">
           <h2 class="font-medium mb-3">Special Events</h2>
-          <a href="" class="text-sm font-light">Corporate</a>
-          <a href="" class="text-sm font-light">Midway</a>
-          <a href="" class="text-sm font-light">Lima</a>
-          <a href="" class="text-sm font-light">Service</a>
-          <a href="" class="text-sm font-light">Midway</a>
-          <a href="" class="text-sm font-light">Airport</a>
-          <a href="" class="text-sm font-light">Lima</a>
-          <a href="" class="text-sm font-light">Chicago</a>
-          <a href="" class="text-sm font-light">Midway</a>
-          <a href="" class="text-sm font-light">Lima</a>
-          <a href="" class="text-sm font-light">Service To</a>
-          <a href="" class="text-sm font-light">Joliet</a>
-          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
         </div>
 
         <div class="flex flex-col p-3">
           <h2 class="font-medium mb-3">Service Areas</h2>
-          <a href="" class="text-sm font-light">Corporate</a>
-          <a href="" class="text-sm font-light">Midway</a>
-          <a href="" class="text-sm font-light">Lima</a>
-          <a href="" class="text-sm font-light">Service</a>
-          <a href="" class="text-sm font-light">Midway</a>
-          <a href="" class="text-sm font-light">Airport</a>
-          <a href="" class="text-sm font-light">Lima</a>
-          <a href="" class="text-sm font-light">Chicago</a>
-          <a href="" class="text-sm font-light">Midway</a>
-          <a href="" class="text-sm font-light">Lima</a>
-          <a href="" class="text-sm font-light">Service To</a>
-          <a href="" class="text-sm font-light">Joliet</a>
-          <a href="" class="text-sm font-light">Midway</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
+          <a href="" class="text-sm font-light">Corporate Midway Limo Service</a>
+          <a href="" class="text-sm font-light">Midway Airport Limo Service</a>
         </div>
+
+        <div class="p-10 flex flex-col hidden md:block">
+          <img src="img/New-Logo-different-font.png" class="h-28 w-32 mx-auto" alt="">
+          <div class="flex text-sm">
+            <i class="fa-solid fa-envelope text-xl"></i>
+            <p>info@Skylinechicagolimo.com</p>
+          </div>
+          <div class="flex text-sm mt-2">
+            <i class="fa-solid fa-phone text-xl"></i>
+            <p>+1 (773) 575-8169</p>
+          </div>
+  
+          <div class="flex justify-center gap-1 mt-3">
+            <i class="fa-brands fa-facebook-f footer_fab"></i>
+            <i class="fa-brands fa-twitter footer_icon"></i>
+            <i class="fa-brands fa-linkedin-in footer_icon"></i>
+            <i class="fa-brands fa-instagram footer_icon"></i>
+            <i class="fa-brands fa-youtube footer_you"></i>
+          </div>
+
+          <div class="mt-4  hidden md:block">
+            <div class="flex items-center justify-center">
+              <img src="img/secure90x72.gif" class="h-16 w-20 mr-8" alt="">
+              <img src="img/NLA.jpg" class="mt-1 w-20" alt="">
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-center items-center text-center">
+            <p class="p-5">Download Our App and Use Codes 1F286F</p>
+          </div>
+
+          <div class="flex p-3 gap-6  justify-center">
+            <img src="img/apple-store-p3mqeojezwn2nb04loazbggojgeoqsz51u2s7wqq16.jpg" class="h-8 mt-6 w-24" alt="">
+            <img src="img/play-store-p3mqf97v69fdqq638x8rub8tlxkrg598gofgrzw28a.jpg" class="h-8 mt-6 w-24" alt="">
+          </div>
+
+          <!-- cccc -->
+          <div class="flex flex-col p-10 pt-3 pb-10 text-sm hidden md:block">
+            <div class="flex">
+              <i class="fa-solid fa-copyright"></i>2021 Skyline Chicago Limousine Service.
+    
+            </div>
+            All Rights Reserved.
+          </div>
+    
+        </div>
+
       </div>
-      <div class="p-10 flex flex-col">
-        <img src="img/New-Logo-different-font.png" class="" alt="">
+      <div class="p-10 flex flex-col  md:hidden">
+        <img src="img/New-Logo-different-font.png" class="h-28 w-32 mx-auto" alt="">
         <div class="flex text-sm">
           <i class="fa-solid fa-envelope text-xl"></i>
           <p>info@Skylinechicagolimo.com</p>
@@ -252,25 +352,27 @@
           <i class="fa-brands fa-linkedin-in footer_icon"></i>
           <i class="fa-brands fa-instagram footer_icon"></i>
           <i class="fa-brands fa-youtube footer_you"></i>
-
         </div>
+
+        
+  
       </div>
 
-      <div class="flex p-3 justify-center">
+      <div class="flex p-3 justify-center md:hidden">
         <img src="img/secure90x72.gif" class="h-20 w-24 mr-8" alt="">
-        <img src="img/NLA.jpg" class="h-8 mt-6 w-24" alt="">
+        <img src="img/NLA.jpg" class=" mt-6 w-28" alt="">
       </div>
 
-      <div class="flex flex-col justify-center items-center text-center">
+      <div class="flex flex-col justify-center items-center text-center md:hidden">
         <p class="p-5">Download Our App and Use Codes 1F286F</p>
       </div>
 
-      <div class="flex p-3 gap-6  justify-center">
+      <div class="flex p-3 gap-6  justify-center md:hidden">
         <img src="img/apple-store-p3mqeojezwn2nb04loazbggojgeoqsz51u2s7wqq16.jpg" class="h-8 mt-6 w-24" alt="">
         <img src="img/play-store-p3mqf97v69fdqq638x8rub8tlxkrg598gofgrzw28a.jpg" class="h-8 mt-6 w-24" alt="">
       </div>
 
-      <div class="flex flex-col p-10 pt-3 pb-10 text-xs">
+      <div class="flex flex-col p-10 pt-3 pb-10 text-xs md:hidden">
         <div class="flex">
           <i class="fa-solid fa-copyright"></i>2021 Skyline Chicago Limousine Service.
 
@@ -279,10 +381,9 @@
       </div>
 
       <div class="w-full footer_bottom">
-        <p class="p-8 py-3 text-center">All Rights Reserved <i class="fa-solid fa-copyright"></i> Skyline Chicago Limo</p>
+        <p class="p-8 py-3 md:text-left text-center">All Rights Reserved <i class="fa-solid fa-copyright"></i> Skyline Chicago Limo</p>
       </div>
 
-    
 
     </footer>
     <script src="js/jquery-3.6.0.min.js"></script>
