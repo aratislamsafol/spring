@@ -57,10 +57,18 @@
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
+@media only screen and (min-width: 992px) {
+    .contetn_img{
+        height: 650px;
+    }
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {...}
+@media only screen and (min-width: 1200px) {
+    .contetn_img{
+        height: 600px;
+    }
+}
 .border_color{
     color:blue;
 }
@@ -129,11 +137,18 @@
 
 .footer_bottom{
     background: #F15A2B;
+    width: 100%;
     
 }
 .nav_call_bg{
     background: #377095;
     
+}
+.nav_call_bgx{
+    background: #377095;  
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom:70px;
 }
 .btn-md{
     
